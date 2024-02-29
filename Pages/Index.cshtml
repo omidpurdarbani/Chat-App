@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<link href="~/css/chat.css" rel="stylesheet" />
+@section Scripts
+{
+    <script src="~/js/Chat.js"></script>
+}
+
+<div id="chatDialog" title="Chat With Support" class="disconnected">
+    <div id="chatWelcomePanel">
+        <h3>Have a question ?</h3>
+        <form id="chatConnectForm">
+            <input class="form-control" type="text" placeholder="Enter Your Name"/>
+            <input type="submit" class="btn btn-info" value="Connect"/>
+        </form>
+    </div>
+    <div id="chatConnectingInfo">
+        <strong>Connecting ...</strong>
+    </div>
+    <div id="chatMainPanel">
+        <ul id="chatHistory"></ul>
+        <div id="bottomPanel">
+            <div class="row">
+                <form id="chatForm">
+                    <div class="col-md-8">
+                        <input id="messageTextBox" class="form-control" type="text" placeholder="Type a Message"/>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" class="btn btn-success" value="Send"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

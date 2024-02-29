@@ -1,0 +1,24 @@
+﻿@page
+@model MyChat.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<link href="~/css/agent.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<div class="jumbotron">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <p class="lead">@ViewData["Subtitle"]</p>
+</div>
+<div class="container">
+    <form method="post">
+        <div class="form-group">
+            <label>Username</label>
+            <input asp-for="Username" class="form-control" placeholder="Username">
+            <label>Password</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
